@@ -5,5 +5,11 @@ class ProjectSerializer(serializers.ModelSerializer):
 		class Meta:
 				model = models.Project
 				fields = '__all__'
+class MessageSerializer(serializers.ModelSerializer):
+		#column1_name = serializers.UUIDField(read_only=True) #so you don't have to put it as entry
+		class Meta:
+				model = models.YearMessage
+				fields = ['year','message']
 					
+								
 				
