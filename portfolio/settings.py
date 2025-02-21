@@ -130,7 +130,7 @@ STATIC_URL = 'static/'
 
 # 🔥 Autoriser Netlify à accéder à ton backend
 CORS_ALLOWED_ORIGINS = [
-    "https://musical-narwhal-e7bfbb.netlify.app",  # Remplace par l'URL de ton frontend
+    "https://moaadb.netlify.app",  # Remplace par l'URL de ton frontend
 ]
 
 # Autoriser les requêtes API externes
