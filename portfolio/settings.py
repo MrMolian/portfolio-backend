@@ -27,7 +27,9 @@ SECRET_KEY = 'django-insecure-xm7%z#q791yofo%$e5wgcx(guhcf24l9kvo*m!l01gqc)_7^y$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "portfolio-backend-padu.onrender.com"
+]
 
 
 # Application definition
@@ -42,7 +44,8 @@ INSTALLED_APPS = [
     'projects',
     'django_extensions',
     'rest_framework',
-    'django_filters'
+    'django_filters',
+    "corsheaders"
 ]
 
 MIDDLEWARE = [
@@ -53,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -123,6 +127,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+
+# 🔥 Autoriser Netlify à accéder à ton backend
+CORS_ALLOWED_ORIGINS = [
+    "https://musical-narwhal-e7bfbb.netlify.app",  # Remplace par l'URL de ton frontend
+]
+
+# Autoriser les requêtes API externes
+CORS_ALLOW_METHODS = ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+CORS_ALLOW_HEADERS = ["*"]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
