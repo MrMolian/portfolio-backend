@@ -1,6 +1,10 @@
 from django.db import models
 
-
+class YearMessage(models.Model):
+    year = models.IntegerField()
+    message = models.TextField()
+    def __str__(self):
+        return self.message
 
 class Project(models.Model):
     name = models.CharField(max_length=20)
