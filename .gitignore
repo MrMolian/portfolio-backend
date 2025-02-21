@@ -1,0 +1,18 @@
+# Fichiers inutiles
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Base de données (ne jamais mettre db.sqlite3 en ligne)
+db.sqlite3
+
+# Environnements virtuels
+venv/
+env/
+
+# Clés secrètes et variables d'environnement
+.env
+
+# Fichiers de dépendances (si Pipfile est utilisé)
+Pipfile.lock
